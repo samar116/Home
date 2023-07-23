@@ -1,0 +1,280 @@
+/*****
+ color zilla
+
+ */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/************Global****************** */
+* {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+/* body {
+    height: 4000px;
+} */
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+button
+{
+    cursor: pointer;
+}
+h2 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+h2::before,
+h2::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 42%;
+    height: 10px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+h2::after {
+    left: initial;
+    right: 9px;
+}
+
+section:not(:first-child) {
+    margin: 44px 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************** */
+.header {
+    background-image: url(../images/header_background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff6e;
+}
+
+.header_content {
+    margin: 5% auto;
+    width: 18%;
+    text-align: center;
+}
+
+.header_content img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid #EEE;
+}
+
+.header_content h1 {
+    font-family: 'Cairo', sans-serif;
+}
+
+/************start nav************** */
+nav {
+    border-top: 2px solid #CCC;
+    border-bottom: 2px solid #CCC;
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+    z-index: 1;
+}
+
+nav ul {
+    width: 50%;
+    height: 50px;
+    margin: auto;
+    line-height: 50px;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+    text-transform: uppercase;
+}
+
+nav ul li.more div {
+    height: 150px;
+    width: 150px;
+    background-color: #F00;
+    position: absolute;
+    top: 40px;
+    left: -15px;
+    display: none;
+}
+
+nav ul li.more:hover div {
+    display: block;
+}
+
+nav ul li select {
+    text-transform: uppercase;
+    border: none;
+    color: rgb(85, 85, 85);
+    outline: none;
+}
+
+nav ul li .fa-caret-down {
+    font-size: 13px;
+    margin: 5px;
+}
+
+.about {
+    text-align: center;
+}
+
+.about span {
+    color: #F00;
+}
+
+/*******start services***************** 
+.services .services_head > *
+{
+    float: left;
+    margin: 0;
+}
+.services .services_head div
+{
+    width: 40%;
+    height: 10px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-top: 15px;
+}
+.services h2
+{
+    padding: 5px 5px;
+}
+/**************** NOT GOOD********************* *
+.services {
+    position: relative;
+}
+
+.services h2 {
+    position: absolute;
+    top: -320%;
+    left: 47%;
+    padding: 7px;
+    background: #FFF;
+}
+/**************************************** */
+.services .content .service {
+    float: left;
+    width: 25%;
+}
+
+.services .content p {
+    font-size: 14px;
+    color: #BBB;
+}
+
+.services .content button {
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    background: #FFF;
+    border: 1px solid;
+}
+
+/*************Recent**************** */
+.recent h2::before {
+    left: -20px;
+}
+
+.recent h2::after {
+    right: -20px;
+}
+
+.recent .work_container .work {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.recent .work_container .work img {
+    width: 100%;
+}
+
+.recent .work_container .work h4 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+}
+
+.recent .work_container .anchors_container {
+    text-align: center;
+}
+
+.recent .work_container .anchors_container a {
+    text-decoration: none;
+    color: #bd1550
+}
+
+.recent .work_container .anchors_container a:not(:last-child):after {
+    content: "|";
+    margin: 0 5px;
+}
+
+/***********description********************** */
+.description .description_content {
+    border: 8px groove;
+    padding: 15px;
+}
+
+.description .description_content p,
+.description .description_content p {
+    float: left;
+}
+
+.description .description_content p {
+    width: 60%;
+}
+
+.description .description_content button {
+    width: 30%;
+    margin: 15px 30px;
+    height: 40px;
+    text-transform: uppercase;
+    background: #bd1550;
+    color: #FFF;
+    font-size: 14px;
+    border: none;
+
+}
